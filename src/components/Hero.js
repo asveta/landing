@@ -7,7 +7,7 @@ function Hero () {
     <div className="hero-wrapper">
       <div className="hero">
         <div className="hero-img-wrapper">
-          <img src={hero_img} alt="Asveta" className="img-max-width"/>
+          <img src={hero_img} alt="Asveta" />
         </div>
         <h1>Онлайн уроки для закрепления школьной программы</h1>
       </div>

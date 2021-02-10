@@ -3,13 +3,21 @@ import './App.css';
 import Header from "./components/Header"
 import Hero from "./components/Hero"
 import Filter from "./components/Filter"
+import About from "./components/About"
+import Pricing from "./components/Pricing"
+import Footer from "./components/Footer"
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <Hero />
-      <Filter />
+      <div className="showcase">
+        <Hero />
+        <Filter />
+      </div>
+      <About />
+      <Pricing />
+      <Footer />
     </div>
   );
 }
