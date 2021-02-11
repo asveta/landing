@@ -8,6 +8,8 @@ import About from "./components/About";
 import Pricing from "./components/Pricing";
 import Footer from "./components/Footer";
 import Modal from "./components/Modal";
+import SendRequestCta from "./components/SendRequestCta";
+import { render } from "@testing-library/react";
 
 function App() {
   const [request, setRequest] = useState({});
@@ -19,19 +21,25 @@ function App() {
     console.log(updatedRequest);
     setRequest(updatedRequest);
   };
-  console.log(request);
-  
+
+  const [formRequest, setFormRequest] = useState({ request });
+  const getFormRequest = () => {
+    setFormRequest(request);
+    console.log("form:" + formRequest.Предмет);
+    render(<Modal request={request} />);
+  };
+
   return (
     <div className="App">
       <Header />
       <div className="showcase">
         <Hero />
-        <Filter addRequest={addRequest} />
+        <Filter addRequest={addRequest} getFormRequest={getFormRequest} />
       </div>
       <About />
       <Pricing />
       <Footer />
-      <Modal request={request}/>
+      <SendRequestCta getFormRequest={getFormRequest} />
     </div>
   );
 }
