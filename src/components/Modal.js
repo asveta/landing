@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import FormOutput from "./FormOutput";
+import firebase from "../utils/firebase";
 
 function Modal({ request }) {
   function closeModal(e) {
@@ -7,7 +8,27 @@ function Modal({ request }) {
     document.body.classList.remove("body-modal");
   }
 
-  console.log("popup:" + request);
+  const [name, setName] = useState(null);
+  const [contact, setContact] = useState(null);
+
+  const handleName = (e) => {
+    setName(e.target.value);
+  };
+
+  const handleContact = (e) => {
+    setContact(e.target.value);
+  };
+
+  const sendLead = () => {
+    const asvetaRef = firebase.database().ref("Lead");
+    const lead = {
+      name,
+      contact,
+      ...request,
+    };
+    console.log(lead);
+    asvetaRef.push(lead);
+  };
 
   return (
     <div className="modal-bg " id="modal">
@@ -31,6 +52,7 @@ function Modal({ request }) {
                 type="text"
                 placeholder="Ваше имя"
                 className="contact-input"
+                onChange={handleName}
               />
             </div>
           </div>
@@ -41,13 +63,14 @@ function Modal({ request }) {
                 type="text"
                 placeholder="Телефон/email"
                 className="contact-input"
+                onChange={handleContact}
               />
             </div>
           </div>
         </div>
-        <div className="request-button m-0">
+        <button className="request-button m-0" onClick={() => sendLead()}>
           <span>Оставить заявку →</span>
-        </div>
+        </button>
       </div>
     </div>
   );

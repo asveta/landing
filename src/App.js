@@ -8,7 +8,6 @@ import About from "./components/About";
 import Pricing from "./components/Pricing";
 import Footer from "./components/Footer";
 import Modal from "./components/Modal";
-import SendRequestCta from "./components/SendRequestCta";
 import { render } from "@testing-library/react";
 
 function App() {
