@@ -18,6 +18,12 @@ function Pricing() {
           <span>Оставить заявку</span>
           <img className="arrow-icon" src={img_arrow} alt="" />
         </div>
+        <div className="request-button" onClick={() => {
+          document.querySelector("#modal").classList.remove('hide')
+          document.body.classList.add("body-modal")
+        }}>
+          <span>Оставить заявку →</span>
+        </div>
       </div>
       <div className="pricing-img-wrapper">
         <img src={pricing_img} alt="pricing" />

@@ -1,6 +1,9 @@
 .block {
   display: block;
 }
+.hide {
+  display: none;
+}
 .flex {
   display: flex;
 }
@@ -29,7 +32,10 @@
 }
 
 /*----------------------------------*/
-
+.body-modal {
+  position: fixed;
+  overflow: hidden;
+}
 .App {
   max-width: 1440px;
   margin: auto;

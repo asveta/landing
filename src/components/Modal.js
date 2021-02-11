@@ -1,14 +1,14 @@
 import React from 'react';
 import FormOutput from "./FormOutput";
 
-function Modal () {
-
+function Modal ( {request} ) {
   function closeModal (e) {
-    e.target.parentElement.parentElement.parentElement.parentElement.remove()
+    document.querySelector("#modal").classList.add("hide");
+    document.body.classList.remove("body-modal");
   }
 
   return (
-    <div className="modal-bg">
+    <div className="modal-bg hide" id="modal">
       <div className="modal">
         <div className="between pb-24">
           <h1>Оставить заявку на участие</h1>
@@ -17,7 +17,7 @@ function Modal () {
           </div>
         </div>
         <h2 className="mv-24">Оставьте заявку на участие и мы с вами свяжемся, как только подберем подходящий вариант</h2>
-        <FormOutput options={['Английский', '8 класс', '13:00 - 17:00']} outputStyle={true} />
+        { <FormOutput request={request} />}
         <div className="contact-form mv-24 between">
           <div className="flex-grow mr-16">
             <h2>Как к вам обратиться</h2>

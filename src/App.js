@@ -20,6 +20,7 @@ function App() {
     setRequest(updatedRequest);
   };
   console.log(request);
+  
   return (
     <div className="App">
       <Header />
@@ -30,7 +31,7 @@ function App() {
       <About />
       <Pricing />
       <Footer />
-      <Modal />
+      <Modal request={request}/>
     </div>
   );
 }
