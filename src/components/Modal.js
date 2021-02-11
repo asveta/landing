@@ -36,16 +36,24 @@ function Modal({ request }) {
     }
     console.log(lead);
     asvetaRef.push(lead);
+    document.querySelectorAll(".modal > div:not(.close-button):not(#success), .modal > h2, .modal > .request-button").forEach(el => el.classList.add("force-hide"));
+    document.querySelector("#success").classList.remove('hide');
   };
 
   return (
     <div className="modal-bg " id="modal">
       <div className="modal">
-        <div className="between pb-24">
-          <h1>Оставить заявку на участие</h1>
+          <div className="hide" id="success">
+            <h2 className="mv-24">Ваша заявка принята</h2>
+            <button className="bg-green request-button m-0" onClick={closeModal}>
+              <span>Закрыть</span>
+            </button>
+          </div>
           <div className="close-button" onClick={closeModal}>
             <span className="block">╳</span>
           </div>
+        <div className="between pb-24">
+          <h1>Оставить заявку на участие</h1>
         </div>
         <h2 className="mv-24">
           Оставьте заявку на участие и мы с вами свяжемся, как только подберем
