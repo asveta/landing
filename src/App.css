@@ -1,3 +1,35 @@
+.block {
+  display: block;
+}
+.flex {
+  display: flex;
+}
+.between {
+  display: flex;
+  justify-content: space-between;
+}
+.flex-grow {
+  flex-grow: 1;
+}
+.mv-24 {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+.mr-16 {
+  margin-right: 16px;
+}
+.mb-8 {
+  margin-bottom: 8px;
+}
+.m-0 {
+  margin: 0 !important;
+}
+.pb-24 {
+  padding-bottom: 24px;
+}
+
+/*----------------------------------*/
+
 .App {
   max-width: 1440px;
   margin: auto;
@@ -151,4 +183,50 @@ header {
 }
 .telegram-text {
   margin-left: 8px;
+}
+.modal-bg {
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100vh;
+  background-color: #00000099;
+}
+.modal {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 720px;
+  padding: 24px 32px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+.form-output-wrapper {
+  margin: 24px 0px;
+  padding: 24px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+.form-output {
+  display: flex;
+}
+.close-button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.contact-input-wrapper {
+  margin-top: 8px;
+  padding: 16px;
+  background-color: #f5f5f5;
+  border: 1px #DBE2E9;
+  border-radius: 8px;
+}
+.contact-input {
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  font-size: 18px;
 }
