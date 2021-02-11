@@ -27,6 +27,7 @@ function App() {
     setFormRequest(request);
     console.log("form:" + formRequest.Предмет);
     render(<Modal request={request} />);
+    document.body.classList.add("body-modal");
   };
 
   return (
@@ -37,9 +38,8 @@ function App() {
         <Filter addRequest={addRequest} getFormRequest={getFormRequest} />
       </div>
       <About />
-      <Pricing />
+      <Pricing getFormRequest={getFormRequest} />
       <Footer />
-      <SendRequestCta getFormRequest={getFormRequest} />
     </div>
   );
 }

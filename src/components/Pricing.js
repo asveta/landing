@@ -1,8 +1,9 @@
 import React from "react";
 import pricing_img from "../assets/hero_img.png";
 import img_arrow from "../assets/arrow.svg";
+import SendRequestCta from "./SendRequestCta";
 
-function Pricing() {
+function Pricing({ getFormRequest }) {
   return (
     <div className="pricing-section" id="pricing">
       <div className="pricing-wrapper">
@@ -14,16 +15,7 @@ function Pricing() {
           <p>- доступ к интерактивным сервисам для занятий</p>
           <p>- в 2,5 раза дешевле услуг опытного репетитора</p>
         </div>
-        <div className="request-button">
-          <span>Оставить заявку</span>
-          <img className="arrow-icon" src={img_arrow} alt="" />
-        </div>
-        <div className="request-button" onClick={() => {
-          document.querySelector("#modal").classList.remove('hide')
-          document.body.classList.add("body-modal")
-        }}>
-          <span>Оставить заявку →</span>
-        </div>
+        <SendRequestCta getFormRequest={getFormRequest} />
       </div>
       <div className="pricing-img-wrapper">
         <img src={pricing_img} alt="pricing" />
