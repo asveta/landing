@@ -72,7 +72,6 @@ header {
   position: absolute;
   top: 0;
   width: 100%;
-  position: absolute;
 }
 .header-container {
   display: flex;
@@ -116,7 +115,6 @@ header {
 }
 .showcase {
   display: flex;
-  padding-top: 88px;
 }
 .hero-wrapper {
   background-color: #dbe2e9;
