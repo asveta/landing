@@ -29,7 +29,10 @@ const Filter = ({ addRequest }) => {
         />
       </div>
 
-      <div className="request-button">
+      <div className="request-button" onClick={() => {
+        document.querySelector("#modal").classList.remove('hide');
+        document.body.classList.add("body-modal")
+        }}>
         <span>Оставить заявку →</span>
       </div>
     </div>

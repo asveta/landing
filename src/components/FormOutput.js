@@ -1,13 +1,12 @@
 import React from "react";
-import CheckboxOption from "./CheckboxOption";
 
-function FormOutput ( {options} ) {
+function FormOutput ( {request} ) {
 
   return (
     <div className="form-output-wrapper mv-24">
       <h3 className="mb-16">Вас интересует:</h3>
       <div className="form-output">
-        {options.map( option => <CheckboxOption name={option} />)}
+        { request.length && console.log('hey',request.values)}
       </div>
     </div>
   )
