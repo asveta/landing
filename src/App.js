@@ -1,45 +1,21 @@
-import React, { useState } from "react";
+import React from "react";
+import Home from "./pages/Home";
+import TutorsPage from "./pages/Tutors";
 import "./App.css";
-
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Filter from "./components/Filter";
-import About from "./components/About";
-import Pricing from "./components/Pricing";
-import Footer from "./components/Footer";
-import Modal from "./components/Modal";
-import { render } from "@testing-library/react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function App() {
-  const [request, setRequest] = useState({});
-  const addRequest = (id, category) => {
-    let updatedRequest = request;
-    updatedRequest[category] == id
-      ? delete updatedRequest[category]
-      : (updatedRequest[category] = id);
-    console.log(updatedRequest);
-    setRequest(updatedRequest);
-  };
-
-  const [formRequest, setFormRequest] = useState({ request });
-  const getFormRequest = () => {
-    setFormRequest(request);
-    console.log("form:" + formRequest.Предмет);
-    render(<Modal request={request} />);
-    document.body.classList.add("body-modal");
-  };
-
   return (
-    <div className="App">
-      <Header />
-      <div className="showcase">
-        <Hero />
-        <Filter addRequest={addRequest} getFormRequest={getFormRequest} />
-      </div>
-      <About />
-      <Pricing getFormRequest={getFormRequest} />
-      <Footer />
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/tutors">
+          <TutorsPage />
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
