@@ -15,7 +15,7 @@ function Pricing({ getFormRequest }) {
           <p>- доступ к интерактивным сервисам для занятий</p>
           <p>- в 2,5 раза дешевле услуг опытного репетитора</p>
         </div>
-        <SendRequestCta getFormRequest={getFormRequest} />
+        <SendRequestCta action={getFormRequest} />
       </div>
       <div className="pricing-img-wrapper">
         <img src={pricing_img} alt="pricing" />

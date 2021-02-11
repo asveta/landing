@@ -1,13 +1,12 @@
 import React from "react";
-import Modal from "./Modal";
 import img_arrow from "../assets/arrow.svg";
 
-const SendRequestCta = ({ getFormRequest }) => {
+const SendRequestCta = ({ action }) => {
   return (
     <div
       className="request-button"
       onClick={() => {
-        getFormRequest();
+        action();
       }}
     >
       <span>Оставить заявку</span>
