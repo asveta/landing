@@ -6,6 +6,7 @@ import Filter from "./components/Filter"
 import About from "./components/About"
 import Pricing from "./components/Pricing"
 import Footer from "./components/Footer"
+import Modal from "./components/Modal"
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <About />
       <Pricing />
       <Footer />
+      <Modal />
     </div>
   );
 }
