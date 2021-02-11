@@ -1,13 +1,19 @@
 import React from "react";
 import CheckboxOption from "./CheckboxOption";
 
-const CheckboxField = ({ options }) => {
+const CheckboxField = ({ options, category, addRequest }) => {
   return (
     <div className="filter-section">
-      <h2>Предмет</h2>
+      <h2>{category}</h2>
       <div className="options-wrapper">
         {options.map((option) => {
-          return <CheckboxOption name={option} />;
+          return (
+            <CheckboxOption
+              name={option}
+              category={category}
+              addRequest={addRequest}
+            />
+          );
         })}
       </div>
     </div>

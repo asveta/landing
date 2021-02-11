@@ -1,10 +1,14 @@
 import React from "react";
 
-const CheckboxOption = ({ name }) => {
+const CheckboxOption = ({ name, category, addRequest }) => {
   return (
-    <div className="filter-button" id={name}>
+    <button
+      className="filter-button"
+      id={name}
+      onClick={() => addRequest(name, category)}
+    >
       {name}
-    </div>
+    </button>
   );
 };
 

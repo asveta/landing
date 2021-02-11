@@ -1,4 +1,5 @@
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
 
 import Header from "./components/Header"
 import Hero from "./components/Hero"
@@ -9,12 +10,20 @@ import Footer from "./components/Footer"
 import Modal from "./components/Modal"
 
 function App() {
+  const [request, setRequest] = useState({});
+  const addRequest = (id, category) => {
+    let updatedRequest = request;
+    updatedRequest[category] = id;
+    console.log(updatedRequest);
+    setRequest(updatedRequest);
+  };
+  console.log(request);
   return (
     <div className="App">
       <Header />
       <div className="showcase">
         <Hero />
-        <Filter />
+        <Filter addRequest={addRequest} />
       </div>
       <About />
       <Pricing />
