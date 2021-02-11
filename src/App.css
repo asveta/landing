@@ -108,7 +108,7 @@ header {
 }
 .filter-button {
   background-color: #f5f5f5;
-  border: 1px #dbe2e9;
+  border: 1px solid #dbe2e9;
   box-sizing: border-box;
   font-size: 18px;
   padding: 16px 24px;
@@ -126,6 +126,16 @@ header {
 }
 .filter-button-selected:hover {
   background-color: #502fd2;
+}
+.form-item {
+  background-color: #fff;
+  border: 1px solid #dbe2e9;
+  box-sizing: border-box;
+  font-size: 18px;
+  padding: 16px 24px;
+  border-radius: 8px;
+  margin: 8px 8px 0px 0px;
+  transition: cubic-bezier(0.165, 0.84, 0.44, 1) 0.3s;
 }
 .request-button {
   background-color: #6746ec;
