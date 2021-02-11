@@ -1,26 +1,29 @@
-import React from 'react';
-import pricing_img from '../assets/hero_img.png';
+import React from "react";
+import pricing_img from "../assets/hero_img.png";
+import img_arrow from "../assets/arrow.svg";
 
-function Pricing () {
-
+function Pricing() {
   return (
     <div className="pricing-section" id="pricing">
       <div className="pricing-wrapper">
         <h1>Стоимость</h1>
-        <h0 className="price">50 BYN / месяц занятий</h0>
+        <h1 className="price">50 BYN / месяц занятий</h1>
         <h2>по выбранному уроку</h2>
         <div className="pricing-points">
-          <h3>- занятия проходят дважды в неделю</h3>
-          <h3>- доступ к интерактивным сервисам для занятий</h3>
-          <h3>- в 2,5 раза дешевле услуг опытного репетитора</h3>
+          <p>- занятия проходят дважды в неделю</p>
+          <p>- доступ к интерактивным сервисам для занятий</p>
+          <p>- в 2,5 раза дешевле услуг опытного репетитора</p>
         </div>
-        <div className="request-button"><span>Оставить заявку →</span></div>
+        <div className="request-button">
+          <span>Оставить заявку</span>
+          <img className="arrow-icon" src={img_arrow} alt="" />
+        </div>
       </div>
       <div className="pricing-img-wrapper">
-        <img src={pricing_img} alt="pricing"/>
+        <img src={pricing_img} alt="pricing" />
       </div>
     </div>
-  )
+  );
 }
 
 export default Pricing;

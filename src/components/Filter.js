@@ -1,5 +1,6 @@
 import React from "react";
 import CheckboxField from "./CheckboxField";
+import img_arrow from "../assets/arrow.svg";
 
 const Filter = ({ addRequest }) => {
   return (
@@ -30,7 +31,8 @@ const Filter = ({ addRequest }) => {
       </div>
 
       <div className="request-button">
-        <span>Оставить заявку →</span>
+        <span>Оставить заявку</span>
+        <img className="arrow-icon" src={img_arrow} alt="" />
       </div>
     </div>
   );
