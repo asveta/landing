@@ -34,30 +34,51 @@
 .pb-24 {
   padding-bottom: 24px;
 }
+.bg-grey {
+  background-color: #f5f5f5;
+}
+.bg-dark-grey {
+  background-color: #f5f5f5;
+}
+.bg-black {
+  background-color: #101215;
+}
 .bg-green {
   background-color: #11bb22 !important;
 }
 
 /* Element styles */
+body {
+  background-color: #fff;
+}
+
 .body-modal {
   position: fixed;
   overflow: hidden;
   width: 100%;
 }
 .App {
-  max-width: 1440px;
+  /* max-width: 1440px; */
   min-height: 100vh;
   margin: auto;
   background-color: #fff;
 }
+.section-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 header {
+  position: absolute;
+  top: 0;
   width: 100%;
   position: absolute;
 }
 .header-container {
   display: flex;
-  margin: 0 auto;
+  margin: 0;
   width: 100%;
+  max-width: 1440px;
   height: 88px;
 }
 .logo {
@@ -65,15 +86,14 @@ header {
   display: flex;
   align-items: center;
   width: 50%;
-  background-color: #dbe2e9;
-  padding: 20px 72px;
+  padding: 20px 0;
 }
 .nav-bar {
   width: 50%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 24px 16px;
+  padding: 24px 0;
   box-sizing: border-box;
 }
 .navbar-link {
@@ -100,18 +120,36 @@ header {
 }
 .hero-wrapper {
   background-color: #dbe2e9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
   width: 50%;
+  height: 100vh;
+  padding-left: 96px;
   max-width: 50%;
-  padding: 24px 72px 78px;
+  box-sizing: border-box;
+}
+.hero {
+  max-width: 720px;
+  padding: 96px 96px 78px 0;
+  width: 100%;
   box-sizing: border-box;
 }
 .filter-wrapper {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
   width: 50%;
-  padding: 24px 48px;
+  height: 100vh;
+  padding: 96px 48px 24px;
   box-sizing: border-box;
 }
 .filter-section {
   margin: 24px 0px;
+  max-width: 720px;
+  width: 100%;
 }
 .options-wrapper {
   display: flex;
@@ -181,6 +219,8 @@ header {
 .about-section {
   padding: 72px 96px;
   background-color: #fff;
+  width: 100%;
+  max-width: 1440px;
 }
 .about {
   display: flex;
@@ -196,8 +236,8 @@ header {
 .pricing-section {
   display: flex;
   padding: 72px 96px;
-  background-color: #f5f5f5;
-  box-sizing: border-box;
+  width: 100%;
+  max-width: 1440px;
 }
 .price {
   display: block;
@@ -219,6 +259,8 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 32px 72px;
+  width: 100%;
+  max-width: 1440px;
   background-color: #101215;
 }
 .footer-logo {
@@ -288,6 +330,15 @@ header {
   margin: auto;
   width: fit-content;
   text-align: center;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.paragraph {
+  margin-bottom: 8px;
+  line-height: 20px;
 }
 
 /* Mobile styles */

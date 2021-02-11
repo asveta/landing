@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function Header() {
   return (
-    <header>
+    <header className="section-wrapper">
       <div className="header-container">
         <div className="logo">
           <Link to="/">
@@ -13,14 +13,9 @@ function Header() {
         </div>
         <div className="nav-bar">
           <div className="header-block">
-            <a href="#about" className="nav-bar-link">
-              О школе
-            </a>
-          </div>
-          <div className="header-block">
-            <a href="#pricing" className="nav-bar-link">
-              Стоимость
-            </a>
+            <Link to="/" className="nav-bar-link">
+              Хочу учиться
+            </Link>
           </div>
           <div className="separator"></div>
           <div className="header-block">
