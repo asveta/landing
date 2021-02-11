@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import CheckboxOption from "./CheckboxOption";
 
 const CheckboxField = ({ options, category, addRequest }) => {
+  const [activeCheckbox, setActiveCheckbox] = useState(null);
+  const changeActive = (name) => {
+    setActiveCheckbox(name);
+  };
+  console.log(activeCheckbox);
   return (
     <div className="filter-section">
       <h2>{category}</h2>
@@ -12,6 +17,8 @@ const CheckboxField = ({ options, category, addRequest }) => {
               name={option}
               category={category}
               addRequest={addRequest}
+              changeActive={changeActive}
+              active={activeCheckbox == option ? true : false}
             />
           );
         })}
