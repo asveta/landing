@@ -1,18 +1,19 @@
 import React from "react";
-import logo from "../assets/logo_white.png"
-import telegram from "../assets/telegram_logo.png"
+import logo from "../assets/logo_white.png";
+import telegram from "../assets/telegram_logo.png";
 
-function Footer () {
-
+function Footer() {
   return (
-    <div className="footer">
-      <img src={logo} alt="asveta" className="footer-logo" />
-      <a href="https://t.me/asvetaorg" className="telegram-link">
-        <img src={telegram} alt="telegram" />
-        <span className="telegram-text">Наш Telegram канал</span>
-      </a>
+    <div className="section-wrapper bg-black">
+      <div className="footer">
+        <img src={logo} alt="asveta" className="footer-logo" />
+        <a href="https://t.me/asvetaorg" className="telegram-link">
+          <img src={telegram} alt="telegram" />
+          <span className="telegram-text">Наш Telegram канал</span>
+        </a>
+      </div>
     </div>
-  )
+  );
 }
 
 export default Footer;
