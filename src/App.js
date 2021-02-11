@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import "./App.css";
 
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Filter from "./components/Filter";
-import About from "./components/About";
-import Pricing from "./components/Pricing";
-import Footer from "./components/Footer";
+import Header from "./components/Header"
+import Hero from "./components/Hero"
+import Filter from "./components/Filter"
+import About from "./components/About"
+import Pricing from "./components/Pricing"
+import Footer from "./components/Footer"
+import Modal from "./components/Modal"
 
 function App() {
   const [request, setRequest] = useState({});
@@ -27,6 +28,7 @@ function App() {
       <About />
       <Pricing />
       <Footer />
+      <Modal />
     </div>
   );
 }

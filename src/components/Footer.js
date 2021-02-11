@@ -7,7 +7,7 @@ function Footer () {
   return (
     <div className="footer">
       <img src={logo} alt="asveta" className="footer-logo" />
-      <a className="telegram-link">
+      <a href="https://t.me/asvetaorg" className="telegram-link">
         <img src={telegram} alt="telegram" />
         <span className="telegram-text">Наш Telegram канал</span>
       </a>
