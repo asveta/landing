@@ -274,6 +274,15 @@ header {
   border-color: #bb2e2e;
 }
 
+.bold {
+  font-weight: 600;
+}
+
+.paragraph {
+  margin-bottom: 8px;
+  line-height: 20px;
+}
+
 /* Mobile styles */
 @media screen and (max-width: 1280px) {
   .showcase {

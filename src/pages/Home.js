@@ -35,7 +35,7 @@ function HomePage() {
         <Hero />
         <Filter addRequest={addRequest} getFormRequest={getFormRequest} />
       </div>
-      <About title="О нас" />
+      <About title="О проекте" />
       <Pricing getFormRequest={getFormRequest} />
       <Footer />
     </div>
