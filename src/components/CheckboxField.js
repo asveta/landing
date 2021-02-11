@@ -4,7 +4,7 @@ import CheckboxOption from "./CheckboxOption";
 const CheckboxField = ({ options, category, addRequest }) => {
   const [activeCheckbox, setActiveCheckbox] = useState(null);
   const changeActive = (name) => {
-    setActiveCheckbox(name);
+    activeCheckbox == name ? setActiveCheckbox(null) : setActiveCheckbox(name);
   };
   console.log(activeCheckbox);
   return (
