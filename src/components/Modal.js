@@ -43,7 +43,7 @@ function Modal({ request }) {
           Оставьте заявку на участие и мы с вами свяжемся, как только подберем
           подходящий вариант
         </h2>
-        <FormOutput request={request} />
+        { Object.values(request).length ? <FormOutput request={Object.values(request)} /> : <></>}
         <div className="contact-form mv-24 between">
           <div className="flex-grow mr-16">
             <h2>Как к вам обратиться</h2>

@@ -1,3 +1,4 @@
+/* Utility styles */
 .block {
   display: block;
 }
@@ -31,10 +32,11 @@
   padding-bottom: 24px;
 }
 
-/*----------------------------------*/
+/* Element styles */
 .body-modal {
   position: fixed;
   overflow: hidden;
+  width: 100%;
 }
 .App {
   max-width: 1440px;
@@ -174,6 +176,7 @@ header {
   display: flex;
   padding: 72px 96px;
   background-color: #f5f5f5;
+  box-sizing: border-box;
 }
 .price {
   display: block;
@@ -249,4 +252,103 @@ header {
   background-color: transparent;
   outline: none;
   font-size: 18px;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 1280px) {
+  .showcase {
+    flex-wrap: wrap;
+  }
+  .hero-wrapper {
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+    padding: 32px 16px;
+  }
+  .hero img{
+    max-width: -webkit-fill-available;
+  }
+  .filter-wrapper {
+    max-width: 100%;
+    width: 100%;
+    padding: 32px 16px;
+  }
+  .nav-bar {
+    display: none;
+  }
+  .logo {
+    width: 100%;
+    padding: 16px;
+  }
+  .about-section {
+    padding: 32px 16px;
+  }
+  .about {
+    flex-direction: column;
+  }
+  .about-card {
+    width: auto;
+    margin: 16px 0px;
+  }
+  .pricing-section {
+    width: 100%;
+    flex-direction: column-reverse;
+    padding: 32px 16px;
+  }
+  .pricing-img-wrapper img {
+    max-width: 100%;
+    margin-bottom: 32px;
+  }
+  .footer {
+    padding: 32px 16px;
+    flex-direction: column-reverse;
+  }
+  .telegram-link {
+    justify-content: center;
+  }
+  .footer-logo {
+    object-fit: none;
+  }
+  .modal-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #00000099;
+    overflow: scroll;
+  }
+  .modal {
+    position: static;
+    top: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    padding: 24px 32px;
+    background-color: #fff;
+    border-radius: 0px;
+    box-sizing: border-box;
+    min-height: 100vh;
+  }
+  .modal span.block {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
+  .modal h1 {
+    font-size: 24px;
+  }
+  .modal h2 {
+    font-size: 18px;
+  }
+  .form-output {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .contact-form {
+    flex-direction: column;
+  }
+  .contact-form > div {
+    margin: 16px auto 16px 0px;
+  }
 }
