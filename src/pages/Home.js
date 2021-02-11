@@ -9,7 +9,7 @@ import Footer from "../components/Footer";
 import Modal from "../components/Modal";
 import { render } from "@testing-library/react";
 
-function Home() {
+function HomePage() {
   const [request, setRequest] = useState({});
   const addRequest = (id, category) => {
     let updatedRequest = request;
@@ -35,11 +35,11 @@ function Home() {
         <Hero />
         <Filter addRequest={addRequest} getFormRequest={getFormRequest} />
       </div>
-      <About />
+      <About title="О нас" />
       <Pricing getFormRequest={getFormRequest} />
       <Footer />
     </div>
   );
 }
 
-export default Home;
+export default HomePage;

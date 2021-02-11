@@ -31,7 +31,7 @@ const Filter = ({ addRequest, getFormRequest }) => {
         />
       </div>
 
-      <SendRequestCta getFormRequest={getFormRequest} />
+      <SendRequestCta action={getFormRequest} />
       {/* 
       <div
         className="request-button"
