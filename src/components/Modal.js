@@ -20,12 +20,20 @@ function Modal({ request }) {
   };
 
   const sendLead = () => {
+    const email_regex = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+
     const asvetaRef = firebase.database().ref("Lead");
     const lead = {
       name,
       contact,
       ...request,
     };
+    if (!document.querySelector("input[type='email']").value.match(email_regex)) {
+      return document.querySelector("input[type='email']").parentNode.classList.add('invalid-input');
+    }
+    if (!document.querySelector("input[type='text']").value) {
+      return document.querySelector("input[type='text']").parentNode.classList.add('invalid-input');
+    }
     console.log(lead);
     asvetaRef.push(lead);
   };
@@ -53,6 +61,7 @@ function Modal({ request }) {
                 placeholder="Ваше имя"
                 className="contact-input"
                 onChange={handleName}
+                onInput={e => e.target.parentNode.classList.remove("invalid-input")}
               />
             </div>
           </div>
@@ -60,10 +69,11 @@ function Modal({ request }) {
             <h2>Контактные данные</h2>
             <div className="contact-input-wrapper">
               <input
-                type="text"
-                placeholder="Телефон/email"
+                type="email"
+                placeholder="Ваш email"
                 className="contact-input"
                 onChange={handleContact}
+                onInput={e => e.target.parentNode.classList.remove("invalid-input")}
               />
             </div>
           </div>
