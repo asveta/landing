@@ -5,7 +5,7 @@ import img_online from "../assets/img_online.png";
 
 function ForTutors({ title }) {
   return (
-    <div className="section-wrapper">
+    <div className="section-wrapper mt-56">
       <div className="about-section" id="about">
         <h1>{title}</h1>
         <div className="about">
