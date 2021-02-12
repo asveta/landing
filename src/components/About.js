@@ -1,7 +1,7 @@
 import React from "react";
-import img_teachers from "../assets/img_teachers.png";
-import img_cheap from "../assets/img_cheap.png";
-import img_online from "../assets/img_online.png";
+import img_teachers from "../assets/teachers.svg";
+import img_cheap from "../assets/pricy.svg";
+import img_online from "../assets/flexibility.svg";
 
 function About({ title }) {
   return (

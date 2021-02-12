@@ -1,8 +1,7 @@
-import React from 'react';
-import hero_img from '../assets/hero_img.png';
+import React from "react";
+import hero_img from "../assets/hero.svg";
 
-function Hero () {
-
+function Hero() {
   return (
     <div className="hero-wrapper">
       <div className="hero">

@@ -1,6 +1,5 @@
 import React from "react";
-import pricing_img from "../assets/hero_img.png";
-import img_arrow from "../assets/arrow.svg";
+import pricing_img from "../assets/pricing.svg";
 import SendRequestCta from "./SendRequestCta";
 
 function Pricing({ getFormRequest }) {
