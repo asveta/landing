@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import FormOutput from "./FormOutput";
 import firebase from "../utils/firebase";
+import successImg from "../assets/email.svg";
 
 function Modal({ request }) {
   function closeModal(e) {
@@ -54,8 +55,10 @@ function Modal({ request }) {
     <div className="modal-bg " id="modal">
       <div className="modal">
         <div className="hide" id="success">
-          <h2 className="mv-24">Ваша заявка принята</h2>
-          <button className="bg-green request-button m-0" onClick={closeModal}>
+          <img src={successImg} alt="success" />
+          <h2 className="mv-24 mb-8">Ваша заявка принята</h2>
+          <p>Мы вам напишем, как только подберем подходящий урок</p>
+          <button className="request-button my-auto" onClick={closeModal}>
             <span>Закрыть</span>
           </button>
         </div>
