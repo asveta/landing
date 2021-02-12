@@ -79,6 +79,7 @@ header {
   width: 100%;
   max-width: 1440px;
   height: 88px;
+  padding: 0 96px;
 }
 .logo {
   box-sizing: border-box;
