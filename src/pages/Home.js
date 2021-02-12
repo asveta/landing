@@ -23,7 +23,6 @@ function HomePage() {
   const [formRequest, setFormRequest] = useState({ request });
   const getFormRequest = () => {
     setFormRequest(request);
-    console.log("form:" + formRequest.Предмет);
     render(<Modal request={request} />);
     document.body.classList.add("body-modal");
     firebase.analytics().logEvent("open_form");

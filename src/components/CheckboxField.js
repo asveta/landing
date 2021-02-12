@@ -6,7 +6,6 @@ const CheckboxField = ({ options, category, addRequest }) => {
   const changeActive = (name) => {
     activeCheckbox == name ? setActiveCheckbox(null) : setActiveCheckbox(name);
   };
-  console.log(activeCheckbox);
   return (
     <div className="filter-section">
       <h2>{category}</h2>
