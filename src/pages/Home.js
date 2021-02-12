@@ -8,6 +8,7 @@ import Pricing from "../components/Pricing";
 import Footer from "../components/Footer";
 import Modal from "../components/Modal";
 import { render } from "@testing-library/react";
+import firebase from "firebase";
 
 function HomePage() {
   const [request, setRequest] = useState({});
@@ -16,7 +17,6 @@ function HomePage() {
     updatedRequest[category] == id
       ? delete updatedRequest[category]
       : (updatedRequest[category] = id);
-    console.log(updatedRequest);
     setRequest(updatedRequest);
   };
 
@@ -26,6 +26,7 @@ function HomePage() {
     console.log("form:" + formRequest.Предмет);
     render(<Modal request={request} />);
     document.body.classList.add("body-modal");
+    firebase.analytics().logEvent("open_form");
   };
 
   return (

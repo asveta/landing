@@ -28,30 +28,40 @@ function Modal({ request }) {
       contact,
       ...request,
     };
-    if (!document.querySelector("input[type='email']").value.match(email_regex)) {
-      return document.querySelector("input[type='email']").parentNode.classList.add('invalid-input');
+    if (
+      !document.querySelector("input[type='email']").value.match(email_regex)
+    ) {
+      return document
+        .querySelector("input[type='email']")
+        .parentNode.classList.add("invalid-input");
     }
     if (!document.querySelector("input[type='text']").value) {
-      return document.querySelector("input[type='text']").parentNode.classList.add('invalid-input');
+      return document
+        .querySelector("input[type='text']")
+        .parentNode.classList.add("invalid-input");
     }
-    console.log(lead);
     asvetaRef.push(lead);
-    document.querySelectorAll(".modal > div:not(.close-button):not(#success), .modal > h2, .modal > .request-button").forEach(el => el.classList.add("force-hide"));
-    document.querySelector("#success").classList.remove('hide');
+    firebase.analytics().logEvent("submit_form");
+    document
+      .querySelectorAll(
+        ".modal > div:not(.close-button):not(#success), .modal > h2, .modal > .request-button"
+      )
+      .forEach((el) => el.classList.add("force-hide"));
+    document.querySelector("#success").classList.remove("hide");
   };
 
   return (
     <div className="modal-bg " id="modal">
       <div className="modal">
-          <div className="hide" id="success">
-            <h2 className="mv-24">Ваша заявка принята</h2>
-            <button className="bg-green request-button m-0" onClick={closeModal}>
-              <span>Закрыть</span>
-            </button>
-          </div>
-          <div className="close-button" onClick={closeModal}>
-            <span className="block">╳</span>
-          </div>
+        <div className="hide" id="success">
+          <h2 className="mv-24">Ваша заявка принята</h2>
+          <button className="bg-green request-button m-0" onClick={closeModal}>
+            <span>Закрыть</span>
+          </button>
+        </div>
+        <div className="close-button" onClick={closeModal}>
+          <span className="block">╳</span>
+        </div>
         <div className="between pb-24">
           <h1>Оставить заявку на участие</h1>
         </div>
@@ -59,7 +69,11 @@ function Modal({ request }) {
           Оставьте заявку на участие и мы с вами свяжемся, как только подберем
           подходящий вариант
         </h2>
-        { Object.values(request).length ? <FormOutput request={Object.values(request)} /> : <></>}
+        {Object.values(request).length ? (
+          <FormOutput request={Object.values(request)} />
+        ) : (
+          <></>
+        )}
         <div className="contact-form mv-24 between">
           <div className="flex-grow mr-16">
             <h2>Как к вам обратиться</h2>
@@ -69,7 +83,9 @@ function Modal({ request }) {
                 placeholder="Ваше имя"
                 className="contact-input"
                 onChange={handleName}
-                onInput={e => e.target.parentNode.classList.remove("invalid-input")}
+                onInput={(e) =>
+                  e.target.parentNode.classList.remove("invalid-input")
+                }
               />
             </div>
           </div>
@@ -81,7 +97,9 @@ function Modal({ request }) {
                 placeholder="Ваш email"
                 className="contact-input"
                 onChange={handleContact}
-                onInput={e => e.target.parentNode.classList.remove("invalid-input")}
+                onInput={(e) =>
+                  e.target.parentNode.classList.remove("invalid-input")
+                }
               />
             </div>
           </div>

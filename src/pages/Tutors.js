@@ -1,4 +1,5 @@
 import React from "react";
+import firebase from "firebase";
 
 import Header from "../components/Header";
 import ForTutors from "../components/ForTutors";
@@ -17,6 +18,9 @@ function TutorsPage() {
           href="https://forms.gle/6WiuEUbp9YEVdT2LA"
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => {
+            firebase.analytics().logEvent("visit_tutors_form");
+          }}
         >
           <span>Заполнить форму</span>
           <img className="arrow-icon" src={img_arrow} alt="" />
