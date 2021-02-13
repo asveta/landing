@@ -9,7 +9,7 @@ import img_arrow from "../assets/arrow.svg";
 function TutorsPage() {
   return (
     <div className="App">
-      <Header />
+      <Header page="tutors" />
       <ForTutors title="Преподавателям" />
       <div className="tutors-cta">
         <h2>Готовы попробовать? Заполните анкету</h2>

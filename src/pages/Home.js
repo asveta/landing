@@ -30,7 +30,7 @@ function HomePage() {
 
   return (
     <div className="App">
-      <Header />
+      <Header page="home" />
       <div className="showcase">
         <Hero />
         <Filter addRequest={addRequest} getFormRequest={getFormRequest} />
