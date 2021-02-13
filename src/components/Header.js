@@ -13,15 +13,9 @@ function Header({ page }) {
             </Link>
           </div>
           <div className="nav-bar">
-            <div className="header-block">
+            <div className="header-block mr-0">
               <Link to="/" className="nav-bar-link">
                 Вернуться на главную
-              </Link>
-            </div>
-            <div className="separator"></div>
-            <div className="header-block">
-              <Link to="/tutors" className="nav-bar-link">
-                Хочу преподавать
               </Link>
             </div>
           </div>
@@ -38,15 +32,19 @@ function Header({ page }) {
               <a href="/" className="nav-bar-link">
                 Записаться
               </a>
+            </div>
+            <div className="header-block">
               <a href="/#about" className="nav-bar-link">
                 О проекте
               </a>
+            </div>
+            <div className="header-block">
               <a href="/#pricing" className="nav-bar-link">
                 Стоимость
               </a>
             </div>
             <div className="separator"></div>
-            <div className="header-block">
+            <div className="header-block mr-0">
               <Link to="/tutors" className="nav-bar-link">
                 Хочу преподавать
               </Link>
