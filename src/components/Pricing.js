@@ -17,7 +17,7 @@ function Pricing({ getFormRequest }) {
             </p>
             <p className="paragraph">- пробное занятие бесплатно</p>
           </div>
-          <SendRequestCta action={getFormRequest} />
+          <SendRequestCta title="Оставить заявку" action={getFormRequest} />
         </div>
         <div className="pricing-img-wrapper">
           <img src={pricing_img} alt="pricing" />

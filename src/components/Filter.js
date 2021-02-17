@@ -3,7 +3,7 @@ import CheckboxField from "./CheckboxField";
 import img_arrow from "../assets/arrow.svg";
 import SendRequestCta from "./SendRequestCta";
 
-const Filter = ({ addRequest, getFormRequest }) => {
+const Filter = ({ addRequest, getFormRequest, filterClasses }) => {
   return (
     <div className="filter-wrapper">
       <h1>Подобрать урок</h1>
@@ -30,8 +30,11 @@ const Filter = ({ addRequest, getFormRequest }) => {
           options={["9:00 - 13:00", "13:00 - 17:00", "17:00 - 22:00"]}
         />
       </div>
+      <div>
+        <SendRequestCta title="Подобрать урок" action={filterClasses} />
+        <SendRequestCta title="Оставить заявку" action={getFormRequest} />
+      </div>
 
-      <SendRequestCta action={getFormRequest} />
       {/* 
       <div
         className="request-button"

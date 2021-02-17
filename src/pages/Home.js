@@ -9,6 +9,7 @@ import Footer from "../components/Footer";
 import Modal from "../components/Modal";
 import { render } from "@testing-library/react";
 import firebase from "firebase";
+import FilterResults from "../components/FilterResults";
 
 function HomePage() {
   const [request, setRequest] = useState({});
@@ -20,12 +21,27 @@ function HomePage() {
     setRequest(updatedRequest);
   };
 
-  const [formRequest, setFormRequest] = useState({ request });
   const getFormRequest = () => {
-    setFormRequest(request);
     render(<Modal request={request} />);
     document.body.classList.add("body-modal");
     firebase.analytics().logEvent("open_form");
+  };
+
+  const getInitialData = async () => {
+    firebase
+      .database()
+      .ref("Classes/")
+      .once("value")
+      .then((snapshot) => {
+        setFilteredClasses(snapshot.val());
+      });
+  };
+
+  const [filteredClases, setFilteredClasses] = useState(null);
+  const filterClasses = () => {
+    getInitialData();
+    console.log(filteredClases);
+    // firebase.analytics().logEvent("filter_classes");
   };
 
   return (
@@ -33,8 +49,13 @@ function HomePage() {
       <Header page="home" />
       <div className="showcase">
         <Hero />
-        <Filter addRequest={addRequest} getFormRequest={getFormRequest} />
+        <Filter
+          addRequest={addRequest}
+          getFormRequest={getFormRequest}
+          filterClasses={filterClasses}
+        />
       </div>
+      <FilterResults classes={filteredClases} />
       <About title="О проекте" />
       <Pricing getFormRequest={getFormRequest} />
       <Footer />

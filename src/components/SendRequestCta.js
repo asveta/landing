@@ -1,7 +1,7 @@
 import React from "react";
 import img_arrow from "../assets/arrow.svg";
 
-const SendRequestCta = ({ action }) => {
+const SendRequestCta = ({ title, action }) => {
   return (
     <div
       className="request-button"
@@ -9,7 +9,7 @@ const SendRequestCta = ({ action }) => {
         action();
       }}
     >
-      <span>Оставить заявку</span>
+      <span>{title}</span>
       <img className="arrow-icon" src={img_arrow} alt="" />
     </div>
   );
