@@ -27,7 +27,7 @@
   margin-bottom: 24px;
 }
 .mr-16 {
-  margin-right: 16px;
+  margin-right: 16px !important;
 }
 .mt-56 {
   margin-top: 56px;
@@ -201,6 +201,7 @@ header {
 .request-button {
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: #6746ec;
   box-sizing: border-box;
   font-size: 18px;
@@ -213,7 +214,20 @@ header {
   width: max-content;
   border: none;
 }
-
+.button-secondary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: #6746ec solid 1px;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 16px 24px;
+  border-radius: 8px;
+  margin: 32px 0px;
+  cursor: pointer;
+  width: max-content;
+}
 .tutors-cta {
   width: 100%;
   margin-bottom: 96px;
@@ -236,6 +250,15 @@ header {
   background-color: #fff;
   width: 100%;
   max-width: 1440px;
+}
+.class-card {
+  border: #dbe2e9 solid 1px;
+  border-radius: 8px;
+  padding: 16px;
+  margin-left: 16px;
+}
+.class-card:first-child {
+  margin-left: 0px;
 }
 .about {
   display: flex;

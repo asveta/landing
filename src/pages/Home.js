@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 
 import Header from "../components/Header";
 import Hero from "../components/Hero";
@@ -27,6 +27,8 @@ function HomePage() {
     firebase.analytics().logEvent("open_form");
   };
 
+  const resultsRef = useRef(null);
+
   const getInitialData = async () => {
     firebase
       .database()
@@ -39,8 +41,9 @@ function HomePage() {
 
   const [filteredClases, setFilteredClasses] = useState(null);
   const filterClasses = () => {
-    getInitialData();
+    getInitialData().then(resultsRef.current.scrollIntoView());
     console.log(filteredClases);
+
     // firebase.analytics().logEvent("filter_classes");
   };
 
@@ -55,6 +58,7 @@ function HomePage() {
           filterClasses={filterClasses}
         />
       </div>
+      <div ref={resultsRef}></div>
       <FilterResults classes={filteredClases} />
       <About title="О проекте" />
       <Pricing getFormRequest={getFormRequest} />

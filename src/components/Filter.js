@@ -30,9 +30,13 @@ const Filter = ({ addRequest, getFormRequest, filterClasses }) => {
           options={["9:00 - 13:00", "13:00 - 17:00", "17:00 - 22:00"]}
         />
       </div>
-      <div>
+      <div className="flex">
         <SendRequestCta title="Подобрать урок" action={filterClasses} />
-        <SendRequestCta title="Оставить заявку" action={getFormRequest} />
+        <SendRequestCta
+          title="Оставить заявку"
+          action={getFormRequest}
+          primary
+        />
       </div>
 
       {/* 
