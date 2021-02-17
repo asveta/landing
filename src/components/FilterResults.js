@@ -1,8 +1,8 @@
-import React, { useRef } from "react";
+import React from "react";
 import ClassCard from "./ClassCard";
 
 const FilterResults = ({ classes }) => {
-  const resultsRef = useRef(null);
+  const resultsRef = React.createRef();
   return classes ? (
     <div ref={resultsRef}>
       <h1>Подходящие уроки</h1>
