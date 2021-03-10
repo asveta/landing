@@ -11,9 +11,16 @@
 .flex {
   display: flex;
 }
+.column {
+  display: flex;
+  flex-direction: column;
+}
 .between {
   display: flex;
   justify-content: space-between;
+}
+.align-center {
+  align-items: center;
 }
 .flex-grow {
   flex-grow: 1;
@@ -29,11 +36,23 @@
 .mr-16 {
   margin-right: 16px !important;
 }
+.mr-4 {
+  margin-right: 4px !important;
+}
 .mt-56 {
   margin-top: 56px;
 }
 .mb-8 {
   margin-bottom: 8px !important;
+}
+.mb-16 {
+  margin-bottom: 16px !important;
+}
+.mb-24 {
+  margin-bottom: 24px !important;
+}
+.mb-32 {
+  margin-bottom: 32px !important;
 }
 .m-0 {
   margin: 0 !important;
@@ -55,6 +74,12 @@
 }
 .bg-green {
   background-color: #11bb22 !important;
+}
+.text-grey {
+  color: #4d5c6a;
+}
+.text-bold {
+  font-weight: 600;
 }
 
 /* Element styles */
@@ -228,6 +253,52 @@ header {
   cursor: pointer;
   width: max-content;
 }
+.button-primary-small {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #6746ec;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 8px;
+  margin: 16px 0 0 0;
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+}
+.button-secondary-small {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: #6746ec solid 1px;
+  background-color: #fff;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 8px;
+  margin: 16px 0 0 0;
+  cursor: pointer;
+  width: 100%;
+}
+.results {
+  background-color: #f5f5f5;
+  width: 100%;
+  max-width: 1440px;
+  border-radius: 8px;
+  padding: 24px 32px;
+  box-sizing: border-box;
+}
+.tag {
+  border: #dbe2e9 solid 1px;
+  background-color: #f5f5f5;
+  width: fit-content;
+  padding: 2px 8px 4px;
+  border-radius: 8px;
+}
 .tutors-cta {
   width: 100%;
   margin-bottom: 96px;
@@ -253,9 +324,11 @@ header {
 }
 .class-card {
   border: #dbe2e9 solid 1px;
+  background-color: #fff;
   border-radius: 8px;
   padding: 16px;
   margin-left: 16px;
+  min-width: 240px;
 }
 .class-card:first-child {
   margin-left: 0px;

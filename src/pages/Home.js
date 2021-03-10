@@ -58,7 +58,8 @@ function HomePage() {
           filterClasses={filterClasses}
         />
       </div>
-      <FilterResults classes={filteredClases} />
+      <div ref={resultsRef}></div>
+      <FilterResults classes={filteredClases} getFormRequest={getFormRequest} />
       <About title="О проекте" />
       <Pricing getFormRequest={getFormRequest} />
       <Footer />
