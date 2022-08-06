@@ -15,7 +15,19 @@ function Header({ page }) {
           <div className="nav-bar">
             <div className="header-block mr-0">
               <Link to="/" className="nav-bar-link">
-                Вернуться на главную
+                На главную
+              </Link>
+            </div>
+
+            <div className="header-block mr-0">
+              <Link to="/tutors" className="nav-bar-link">
+                Преподавателям
+              </Link>
+            </div>
+
+            <div className="header-block mr-0">
+              <Link to="/students" className="nav-bar-link">
+                Ученикам
               </Link>
             </div>
           </div>
@@ -46,7 +58,12 @@ function Header({ page }) {
             <div className="separator"></div>
             <div className="header-block mr-0">
               <Link to="/tutors" className="nav-bar-link">
-                Хочу преподавать
+                Преподавателям
+              </Link>
+            </div>
+            <div className="header-block mr-0">
+              <Link to="/students" className="nav-bar-link">
+                Ученикам
               </Link>
             </div>
           </div>

@@ -12,6 +12,7 @@ function Footer() {
           href="https://t.me/asvetaorg"
           className="telegram-link"
           target="_blank"
+          rel="noreferrer"
           onClick={() => {
             firebase.analytics().logEvent("visit_telegram");
           }}

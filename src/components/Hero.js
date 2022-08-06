@@ -8,7 +8,7 @@ function Hero() {
         <div className="hero-img-wrapper">
           <img src={hero_img} alt="Asveta" />
         </div>
-        <h1>Онлайн уроки для закрепления школьной программы</h1>
+        <h1>Онлайн обучение для всех</h1>
       </div>
     </div>
   );

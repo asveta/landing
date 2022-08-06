@@ -10,7 +10,7 @@ function About({ title }) {
         <h1>{title}</h1>
         <div className="about">
           <div className="about-card">
-            <img src={img_teachers} />
+            <img src={img_teachers}  alt=""/>
             <h2 className="card-header">Учителя</h2>
             <p className="paragraph">
               Нам важно, кто будет обучать на{" "}
@@ -26,7 +26,7 @@ function About({ title }) {
             </p>
           </div>
           <div className="about-card">
-            <img src={img_cheap} />
+            <img src={img_cheap} alt=""/>
             <h2 className="card-header">Полезность и выгода</h2>
             <p className="paragraph">
               Обучение в мини-группах по 5 человек удобный вариант для обеих
@@ -38,7 +38,7 @@ function About({ title }) {
             </p>
           </div>
           <div className="about-card">
-            <img src={img_online} />
+            <img src={img_online} alt=""/>
             <h2 className="card-header">Гибкость</h2>
             <p className="paragraph">
               Пользователи <span className="bold">Asveta</span> сами выбирают

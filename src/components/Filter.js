@@ -1,6 +1,5 @@
 import React from "react";
 import CheckboxField from "./CheckboxField";
-import img_arrow from "../assets/arrow.svg";
 import SendRequestCta from "./SendRequestCta";
 
 const Filter = ({ addRequest, getFormRequest, filterClasses }) => {
@@ -38,18 +37,6 @@ const Filter = ({ addRequest, getFormRequest, filterClasses }) => {
           primary
         />
       </div>
-
-      {/* 
-      <div
-        className="request-button"
-        onClick={() => {
-          document.querySelector("#modal").classList.remove("hide");
-          document.body.classList.add("body-modal");
-        }}
-      >
-        <span>Оставить заявку →</span>
-        <img className="arrow-icon" src={img_arrow} alt="" />
-      </div> */}
     </div>
   );
 };

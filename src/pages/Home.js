@@ -10,12 +10,13 @@ import Modal from "../components/Modal";
 import { render } from "@testing-library/react";
 import firebase from "firebase";
 import FilterResults from "../components/FilterResults";
+import BotLink from "../components/BotLink";
 
 function HomePage() {
   const [request, setRequest] = useState({});
   const addRequest = (id, category) => {
     let updatedRequest = request;
-    updatedRequest[category] == id
+    updatedRequest[category] === id
       ? delete updatedRequest[category]
       : (updatedRequest[category] = id);
     setRequest(updatedRequest);
@@ -63,6 +64,7 @@ function HomePage() {
       <About title="О проекте" />
       <Pricing getFormRequest={getFormRequest} />
       <Footer />
+      <BotLink />
     </div>
   );
 }
