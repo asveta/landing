@@ -9,7 +9,7 @@ function Footer() {
       <div className="footer">
         <img src={logo} alt="asveta" className="footer-logo" />
         <a
-          href="https://t.me/asvetaorg"
+          href="https://t.me/Asvetabot"
           className="telegram-link"
           target="_blank"
           onClick={() => {
@@ -17,7 +17,7 @@ function Footer() {
           }}
         >
           <img src={telegram} alt="telegram" />
-          <span className="telegram-text">Наш Telegram канал!</span>
+          <span className="telegram-text">Наш Telegram канал</span>
         </a>
       </div>
     </div>

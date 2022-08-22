@@ -10,7 +10,9 @@ function About({ title }) {
         <h1>{title}</h1>
         <div className="about">
           <div className="about-card">
-            <img src={img_teachers} />
+            <div className="text-center">
+              <img src={img_teachers} />
+            </div>
             <h2 className="card-header">Учителя</h2>
             <p className="paragraph">
               Нам важно, кто будет обучать на{" "}
@@ -25,11 +27,14 @@ function About({ title }) {
               работе с сервисами онлайн-обучения.
             </p>
           </div>
+
           <div className="about-card">
-            <img src={img_cheap} />
+            <div className="text-center">
+              <img src={img_cheap} alt=""/>
+            </div>
             <h2 className="card-header">Полезность и выгода</h2>
             <p className="paragraph">
-              Обучение в мини-группах по 5 человек удобный вариант для обеих
+              Обучение в мини-группах от 5 до 10 человек удобный вариант для обеих
               сторон. Учитель может уделить внимание всем ученикам, а групповой
               формат позволяет снизить стоимость обучения.
             </p>
@@ -37,8 +42,11 @@ function About({ title }) {
               Полезно как индивидуальные занятия, выгодно как групповые.
             </p>
           </div>
+
           <div className="about-card">
-            <img src={img_online} />
+            <div className="text-center">
+              <img src={img_online} />
+            </div>
             <h2 className="card-header">Гибкость</h2>
             <p className="paragraph">
               Пользователи <span className="bold">Asveta</span> сами выбирают

@@ -11,12 +11,22 @@
 .flex {
   display: flex;
 }
+.column {
+  display: flex;
+  flex-direction: column;
+}
 .between {
   display: flex;
   justify-content: space-between;
 }
+.align-center {
+  align-items: center;
+}
 .flex-grow {
   flex-grow: 1;
+}
+.text-center {
+  text-align: center;
 }
 .my-auto {
   margin-left: auto !important;
@@ -27,13 +37,25 @@
   margin-bottom: 24px;
 }
 .mr-16 {
-  margin-right: 16px;
+  margin-right: 16px !important;
+}
+.mr-4 {
+  margin-right: 4px !important;
 }
 .mt-56 {
   margin-top: 56px;
 }
 .mb-8 {
   margin-bottom: 8px !important;
+}
+.mb-16 {
+  margin-bottom: 16px !important;
+}
+.mb-24 {
+  margin-bottom: 24px !important;
+}
+.mb-32 {
+  margin-bottom: 32px !important;
 }
 .m-0 {
   margin: 0 !important;
@@ -55,6 +77,12 @@
 }
 .bg-green {
   background-color: #11bb22 !important;
+}
+.text-grey {
+  color: #4d5c6a;
+}
+.text-bold {
+  font-weight: 600;
 }
 
 /* Element styles */
@@ -113,7 +141,7 @@ header {
   padding: 8px 0;
 }
 .header-block {
-  margin: 0px 16px;
+  margin: 0 16px;
 }
 .nav-bar-link:hover {
   border-bottom: 1px solid #6746ec;
@@ -123,7 +151,7 @@ header {
   width: 1px;
   height: 24px;
   background-color: #c4c4c4;
-  margin: 0px 16px;
+  margin: 0 16px;
 }
 .showcase {
   display: flex;
@@ -159,7 +187,7 @@ header {
   box-sizing: border-box;
 }
 .filter-section {
-  margin: 24px 0px;
+  margin: 24px 0;
   max-width: 720px;
   width: 100%;
 }
@@ -174,7 +202,7 @@ header {
   font-size: 18px;
   padding: 16px 24px;
   border-radius: 8px;
-  margin: 8px 8px 0px 0px;
+  margin: 8px 8px 0 0;
   transition: cubic-bezier(0.165, 0.84, 0.44, 1) 0.3s;
 }
 .filter-button:hover {
@@ -195,19 +223,20 @@ header {
   font-size: 18px;
   padding: 16px 24px;
   border-radius: 8px;
-  margin: 8px 8px 0px 0px;
+  margin: 8px 8px 0 0;
   transition: cubic-bezier(0.165, 0.84, 0.44, 1) 0.3s;
 }
 .request-button {
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: #6746ec;
   box-sizing: border-box;
   font-size: 18px;
   font-weight: 600;
   padding: 16px 24px;
   border-radius: 8px;
-  margin: 32px 0px;
+  margin: 32px 0;
   color: #fff;
   cursor: pointer;
   width: max-content;
@@ -246,7 +275,7 @@ header {
   width: 320px;
 }
 .card-header {
-  margin: 16px 0px;
+  margin: 16px 0;
 }
 .pricing-section {
   display: flex;
@@ -261,7 +290,7 @@ header {
   margin-top: 32px;
 }
 .pricing-points {
-  margin: 32px 0px;
+  margin: 32px 0;
 }
 .pricing-img-wrapper {
   margin: 0 auto;
@@ -312,7 +341,7 @@ header {
   border-radius: 8px;
 }
 .form-output-wrapper {
-  margin: 24px 0px;
+  margin: 24px 0;
   padding: 24px;
   background-color: #f5f5f5;
   border-radius: 8px;
@@ -367,7 +396,7 @@ header {
   }
   .header-container {
     justify-content: space-between;
-    padding: 0px 16px;
+    padding: 0 16px;
     box-sizing: border-box;
   }
   .hero-wrapper {
@@ -422,7 +451,7 @@ header {
   }
   .about-card {
     width: auto;
-    margin: 16px 0px;
+    margin: 16px 0;
   }
   .pricing-section {
     width: 100%;
@@ -464,7 +493,7 @@ header {
     width: 100%;
     padding: 24px 32px;
     background-color: #fff;
-    border-radius: 0px;
+    border-radius: 0;
     box-sizing: border-box;
     min-height: 100vh;
   }
@@ -486,7 +515,7 @@ header {
     flex-direction: column;
   }
   .contact-form > div {
-    margin: 16px auto 16px 0px;
+    margin: 16px auto 16px 0;
   }
   .tutors-cta {
     margin-bottom: 0;
