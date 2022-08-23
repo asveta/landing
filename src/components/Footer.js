@@ -17,7 +17,7 @@ function Footer() {
           }}
         >
           <img src={telegram} alt="telegram" />
-          <span className="telegram-text">Наш Telegram канал</span>
+          <span className="telegram-text">Чат с командой</span>
         </a>
       </div>
     </div>

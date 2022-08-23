@@ -1,6 +1,5 @@
 import React from "react";
 import CheckboxField from "./CheckboxField";
-import img_arrow from "../assets/arrow.svg";
 import SendRequestCta from "./SendRequestCta";
 
 const Filter = ({ addRequest, getFormRequest }) => {

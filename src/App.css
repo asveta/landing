@@ -514,9 +514,6 @@ header {
   .contact-form {
     flex-direction: column;
   }
-  .contact-form > div {
-    margin: 16px auto 16px 0;
-  }
   .tutors-cta {
     margin-bottom: 0;
   }
