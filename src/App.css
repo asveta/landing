@@ -518,3 +518,19 @@ header {
     margin-bottom: 0;
   }
 }
+
+.footer-links {
+  display: flex;
+}
+
+.footer-links a {
+  margin: 0 9px;
+}
+
+.footer-links a:last-child {
+  margin-right: 0;
+}
+
+.footer-links a:first-child {
+  margin-left: 0;
+}

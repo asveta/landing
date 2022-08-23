@@ -24,7 +24,7 @@ function Modal({ request }) {
     let xhr = new XMLHttpRequest()
 
     xhr.addEventListener('load', () => {
-      //console.log('API Response', xhr.responseText);
+      console.log('API Response', xhr.responseText);
     })
     xhr.open('POST', 'http://api.asveta.by/', true);
 
@@ -34,7 +34,8 @@ function Modal({ request }) {
 
     dataArray.map((htmlElem, index) => {
       let key = 'filter_' + index;
-      formData.append(key, htmlElem.innerText);
+      //formData.append(key, htmlElem.innerText);
+      console.log('key', key);
     });
 
     formData.append('email', document.querySelector("input[type='email']").value);
