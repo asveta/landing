@@ -467,7 +467,7 @@ header {
     margin-bottom: 32px;
   }
   .footer {
-    padding: 32px 16px;
+    padding: 1em;
     flex-direction: column-reverse;
   }
   .telegram-link {
@@ -533,4 +533,14 @@ header {
 
 .footer-links a:first-child {
   margin-left: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .footer-links {
+    flex-direction: column;
+  }
+
+  .footer-links a {
+    padding: .25em 0;
+  }
 }
