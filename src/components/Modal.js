@@ -26,7 +26,7 @@ function Modal({ request }) {
     xhr.addEventListener('load', () => {
       console.log('API Response', xhr.responseText);
     })
-    xhr.open('POST', 'http://api.asveta.by/', true);
+    xhr.open('POST', 'https://api.asveta.by/', true);
 
     let formData = new FormData();
     const nodeList = document.querySelectorAll('.form-output .form-item');
