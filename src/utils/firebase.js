@@ -1,14 +1,14 @@
 import firebase from "firebase";
 const firebaseConfig = {
-  apiKey: "AIzaSyDLsIaBKcsJlglNJRfOlWkYpiyiSmIdPmE",
-  authDomain: "asveta-org.firebaseapp.com",
-  databaseURL:
-    "https://asveta-org-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "asveta-org",
-  storageBucket: "asveta-org.appspot.com",
-  messagingSenderId: "552976804536",
-  appId: "1:552976804536:web:36c1786920417d2880a24d",
-  measurementId: "G-73N0QK63PB",
+    apiKey: "AIzaSyDChtIe3BvlTet2R0iOer-hsHxuVmnBC_E",
+    authDomain: "asveta-f8ec1.firebaseapp.com",
+    databaseURL:
+        "https://asveta-f8ec1-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "asveta-f8ec1",
+    storageBucket: "asveta-f8ec1.appspot.com",
+    messagingSenderId: "637848415313",
+    appId: "1:637848415313:web:bda850b18c57da63919c70",
+    measurementId: "G-RBXE9SL5JN",
 };
 
 firebase.initializeApp(firebaseConfig);
