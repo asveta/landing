@@ -32,7 +32,7 @@ function Footer() {
             </a>
 
             <a
-                href="https://www.instagram.com/asvetaorg"
+                href="https://www.instagram.com/asveta.online"
                 className="telegram-link"
                 target="_blank"
                 onClick={() => {
