@@ -544,3 +544,18 @@ header {
     padding: .25em 0;
   }
 }
+
+.for-tutors-btn {
+  background: #ff9800;
+  color: white;
+  font-size: 18px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ff5722;
+  transition: all .3s ease;
+}
+
+.for-tutors-btn:hover {
+  text-decoration: none;
+  background: #ff5722;
+}

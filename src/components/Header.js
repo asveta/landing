@@ -45,8 +45,8 @@ function Header({ page }) {
             </div>
             <div className="separator"></div>
             <div className="header-block mr-0">
-              <Link to="/tutors" className="nav-bar-link">
-                Хочу преподавать
+              <Link to="/tutors" className="nav-bar-link for-tutors-btn">
+                Для учителей
               </Link>
             </div>
           </div>
