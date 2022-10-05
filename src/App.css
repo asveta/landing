@@ -546,12 +546,12 @@ header {
 }
 
 .for-tutors-btn {
-  background: #ff9800;
-  color: white;
+  background: #ffeb3b;
+  color: #000;
   font-size: 18px;
   padding: 8px 12px;
   border-radius: 8px;
-  border: 1px solid #ff5722;
+  border: 1px solid #cddc39;
   transition: all .3s ease;
 }
 
