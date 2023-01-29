@@ -60,3 +60,21 @@
     padding-top: 0;
   }
 }
+
+@media screen and (max-width: 360px) {
+  .groups_header h3 {
+    padding-top: 105px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .groups_header h3 {
+    padding-top: 155px;
+  }
+}
+
+@media screen and (max-width: 325px) {
+  .groups_header h3 {
+    padding-top: 215px;
+  }
+}
