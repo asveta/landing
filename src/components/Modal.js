@@ -20,8 +20,33 @@ function Modal({ request }) {
     setContact(e.target.value);
   };
 
+  const sendApiRequest = () => {
+    let xhr = new XMLHttpRequest()
+
+    xhr.addEventListener('load', () => {
+      console.log('API Response', xhr.responseText);
+    })
+    xhr.open('POST', 'https://api.asveta.by/', true);
+
+    let formData = new FormData();
+    const nodeList = document.querySelectorAll('.form-output .form-item');
+    const dataArray = [...nodeList];
+
+    dataArray.map((htmlElem, index) => {
+      let key = 'filter_' + index;
+      //formData.append(key, htmlElem.innerText);
+      console.log('key', key);
+    });
+
+    formData.append('email', document.querySelector("input[type='email']").value);
+    formData.append('name', document.querySelector("input[type='text']").value);
+    formData.append('security', '' + new Date().valueOf());
+
+    xhr.send(formData);
+  };
+
   const sendLead = () => {
-    const email_regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+    const email_regex = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
 
     const asvetaRef = firebase.database().ref("Lead");
     const lead = {
@@ -43,6 +68,9 @@ function Modal({ request }) {
     }
     asvetaRef.push(lead);
     firebase.analytics().logEvent("submit_form");
+
+    sendApiRequest();
+
     document
       .querySelectorAll(
         ".modal > div:not(.close-button):not(#success), .modal > h2, .modal > .request-button"
@@ -66,10 +94,10 @@ function Modal({ request }) {
           <span className="block">╳</span>
         </div>
         <div className="between pb-24">
-          <h1>Оставить заявку на участие</h1>
+          <h1>Оставить заявку на обучение</h1>
         </div>
         <h2 className="mv-24">
-          Оставьте заявку на участие и мы с вами свяжемся, как только подберем
+          Оставьте заявку на обучение и мы с вами свяжемся, как только подберем
           подходящий вариант
         </h2>
         {Object.values(request).length ? (
@@ -78,7 +106,7 @@ function Modal({ request }) {
           <></>
         )}
         <div className="contact-form mv-24 between">
-          <div className="flex-grow mr-16">
+          <div className="flex-grow">
             <h2>Как к вам обратиться</h2>
             <div className="contact-input-wrapper">
               <input
@@ -92,6 +120,7 @@ function Modal({ request }) {
               />
             </div>
           </div>
+
           <div className="flex-grow">
             <h2>Контактные данные</h2>
             <div className="contact-input-wrapper">
@@ -107,6 +136,7 @@ function Modal({ request }) {
             </div>
           </div>
         </div>
+
         <button className="request-button m-0" onClick={() => sendLead()}>
           <span>Оставить заявку →</span>
         </button>
