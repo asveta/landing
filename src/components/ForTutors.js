@@ -10,7 +10,9 @@ function ForTutors({ title }) {
         <h1>{title}</h1>
         <div className="about">
           <div className="about-card">
-            <img src={img_teachers} alt=""/>
+            <div className="text-center">
+              <img src={img_teachers} alt=""/>
+            </div>
             <h2 className="card-header">Просто начать</h2>
             <p className="paragraph">
               Чтобы начать учить на Asvete нужно только освоить онлайн-сервис,
@@ -22,8 +24,11 @@ function ForTutors({ title }) {
               можете заранее планировать доход от каждой группы.
             </p>
           </div>
+
           <div className="about-card">
-            <img src={img_cheap} alt=""/>
+            <div className="text-center">
+              <img src={img_cheap} alt=""/>
+            </div>
             <h2 className="card-header">Поддержка</h2>
             <p className="paragraph">
               Важно, чтобы вы доверяли нам и и чувствовали себя уверенно.
@@ -38,8 +43,11 @@ function ForTutors({ title }) {
               онлайн.
             </p>
           </div>
+
           <div className="about-card">
-            <img src={img_online} alt=""/>
+            <div className="text-center">
+              <img src={img_online} alt=""/>
+            </div>
             <h2 className="card-header">Свобода и самостоятельность</h2>
             <p className="paragraph">
               На площадке у вас нет начальников, не нужно заполнять отчеты, нет

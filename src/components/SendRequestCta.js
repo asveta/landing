@@ -1,20 +1,16 @@
 import React from "react";
-import { ReactComponent as ArrowSvg } from "../assets/arrow.svg";
+import img_arrow from "../assets/arrow.svg";
 
-const SendRequestCta = ({ title, action, primary }) => {
+const SendRequestCta = ({ action }) => {
   return (
     <div
-      className={primary ? "request-button" : "button-secondary mr-16"}
+      className="request-button"
       onClick={() => {
         action();
       }}
     >
-      <span>{title}</span>
-      <ArrowSvg
-        className="arrow-icon"
-        fill={primary ? "#fff" : "#6746ec"}
-        alt=""
-      />
+      <span>Оставить заявку</span>
+      <img className="arrow-icon" src={img_arrow} alt="" />
     </div>
   );
 };

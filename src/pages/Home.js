@@ -1,70 +1,46 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from 'react';
 
-import Header from "../components/Header";
-import Hero from "../components/Hero";
-import Filter from "../components/Filter";
-import About from "../components/About";
-import Pricing from "../components/Pricing";
-import Footer from "../components/Footer";
-import Modal from "../components/Modal";
-import { render } from "@testing-library/react";
-import firebase from "firebase";
-import FilterResults from "../components/FilterResults";
-import BotLink from "../components/BotLink";
+import Header from '../components/Header';
+import Hero from '../components/Hero';
+import Filter from '../components/Filter';
+import About from '../components/About';
+import Pricing from '../components/Pricing';
+import Footer from '../components/Footer';
+import Modal from '../components/Modal';
+import { render } from '@testing-library/react';
+import firebase from 'firebase';
+import Blog from '../components/Blog/Blog';
+import Groups from '../components/Groups/Groups';
 
 function HomePage() {
   const [request, setRequest] = useState({});
   const addRequest = (id, category) => {
+    console.log(category);
     let updatedRequest = request;
-    updatedRequest[category] === id
-      ? delete updatedRequest[category]
-      : (updatedRequest[category] = id);
+    updatedRequest[category] === id ? delete updatedRequest[category] : (updatedRequest[category] = id);
     setRequest(updatedRequest);
   };
 
+  const [formRequest, setFormRequest] = useState({ request });
   const getFormRequest = () => {
+    setFormRequest(request);
     render(<Modal request={request} />);
-    document.body.classList.add("body-modal");
-    firebase.analytics().logEvent("open_form");
-  };
-
-  const resultsRef = useRef(null);
-
-  const getInitialData = async () => {
-    firebase
-      .database()
-      .ref("Classes/")
-      .once("value")
-      .then((snapshot) => {
-        setFilteredClasses(snapshot.val());
-      });
-  };
-
-  const [filteredClases, setFilteredClasses] = useState(null);
-  const filterClasses = () => {
-    getInitialData().then(resultsRef.current.scrollIntoView());
-    console.log(filteredClases);
-
-    // firebase.analytics().logEvent("filter_classes");
+    document.body.classList.add('body-modal');
+    firebase.analytics().logEvent('open_form');
   };
 
   return (
-    <div className="App">
-      <Header page="home" />
-      <div className="showcase">
+    <div className='App'>
+      <Header page='home' />
+      <div className='showcase'>
         <Hero />
-        <Filter
-          addRequest={addRequest}
-          getFormRequest={getFormRequest}
-          filterClasses={filterClasses}
-        />
+        <Filter addRequest={addRequest} getFormRequest={getFormRequest} />
       </div>
-      <div ref={resultsRef}></div>
-      <FilterResults classes={filteredClases} getFormRequest={getFormRequest} />
-      <About title="О проекте" />
+      <Groups getFormRequest={getFormRequest} />
+      <Blog />
+      <About title='О проекте' />
       <Pricing getFormRequest={getFormRequest} />
       <Footer />
-      <BotLink />
     </div>
   );
 }
